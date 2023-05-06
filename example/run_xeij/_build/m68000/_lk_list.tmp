@@ -1,0 +1,8 @@
+_build/m68000/main.o
+_build/m68000/BASLIB.L
+_build/m68000/CLIB.L
+_build/m68000/DOSLIB.L
+_build/m68000/IOCSLIB.L
+_build/m68000/FLOATFNC.L
+_build/m68000/libgcc.a
+_build/m68000/libstdc++.a
