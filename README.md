@@ -31,6 +31,7 @@ xdev68k は、
 	pacman -S cmake
 	pacman -S libiconv
 	pacman -S git
+	pacman -S pax
 	```
 	msys の perl は初期状態ではロケールが正しく設定されておらず、perl 起動の度に以下のように警告されます。
 	```bash
@@ -61,7 +62,7 @@ xdev68k は、
 	十分なディスク容量（10GB 程度）があることを確認した上で、
 	ホスト環境の bash コンソール上で先ほど clone したディレクトリ xdev68k に移動し、以下のコマンドを実行します。
 	```bash
-	./build_m68k-toolchain.sh
+	bash ./build_m68k-toolchain.sh
 	```
 	xdev68k/m68k-toolchain 以下に、Motorola 680x0 シリーズ対応のクロスコンパイラである m68k-elf-gcc が構築されます。
 	以下のメッセージがコンソールに出力されれば完了です。
@@ -78,7 +79,7 @@ xdev68k は、
 	（ファイル名 XC2101.LZH, XC2102_02.LZH）  
 	* HAS060.X  
 	http://retropc.net/x68000/software/develop/as/has060/
-	（ファイル名 HAS06089.LZH）
+	（ファイル名 HAS06091.LZH）
 	* HLK v3.01  
 	http://retropc.net/x68000/software/develop/lk/hlk/
 	（ファイル名 HLK301B.LZH）
@@ -90,7 +91,7 @@ xdev68k は、
 
 	ホスト環境の bash コンソール上で、先ほどと同じディレクトリ（xdev68k）から以下のコマンドを実行します。
 	```bash
-	./install_xdev68k-utils.sh
+	bash ./install_xdev68k-utils.sh
 	```
 	クロスコンパイル環境で必要になるユーティリティの実行ファイル、ヘッダおよびライブラリがインストールされます。
 	以下のメッセージがコンソールに出力されれば完了です。
@@ -184,7 +185,7 @@ xdev68k/
 │	├ g2lk.x
 │	│		X68k SILK Hi-Speed Linker v2.29 modified for GCC
 │	├ HAS060.X
-│	│		High-speed Assembler 68060 対応版 version 3.09+89
+│	│		High-speed Assembler 68060 対応版 version 3.09+91
 │	├ hlk301.x
 │	│		HLK v3.01
 │	└ MEMSIZE.X
