@@ -9,7 +9,7 @@ RUNS_HUMAN_VERSION	equ	3
 							*|	compiled by GNU C version 12.2.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
 							*
 							*| GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-							*| 渡されたオプション:  -I C:/msys64/home/gespe/xdev68k/include/xc
+							*| options passed:  -I C:/msys64/home/gespe/xdev68k/include/xc
 							*| -I C:/msys64/home/gespe/xdev68k/include/xdev68k
 							*| -iprefix c:\msys64\home\gespe\xdev68k\m68k-toolchain\bin\../lib/gcc/m68k-elf/10.2.0/
 							*| -MD _build/m68000/main.m68k-gas.d -MF _build/m68000/main.d -MP
@@ -17,7 +17,7 @@ RUNS_HUMAN_VERSION	equ	3
 							*| -auxbase-strip _build/m68000/main.m68k-gas.s -Os
 							*| -Wno-builtin-declaration-mismatch -fcall-used-d2 -fcall-used-a2
 							*| -finput-charset=cp932 -fexec-charset=cp932 -fverbose-asm
-							*| 有効オプション:  -faggressive-loop-optimizations -fallocation-dce
+							*| options enabled:  -faggressive-loop-optimizations -fallocation-dce
 							*| -fauto-inc-dec -fbranch-count-reg -fcaller-saves -fcode-hoisting
 							*| -fcombine-stack-adjustments -fcompare-elim -fcprop-registers
 							*| -fcrossjumping -fcse-follow-jumps -fdefer-pop
@@ -179,37 +179,37 @@ _?LC1:							*.LC1:
 _main:							*main:
 	move.l a4,-(sp)					*	move.l %a4,-(%sp)	|,
 	move.l a3,-(sp)					*	move.l %a3,-(%sp)	|,
-							*| main.c:39: 	CRTMOD(6);
+							*| main.c:49: 	CRTMOD(6);
 	pea 6.w						*	pea 6.w		|
 	lea _CRTMOD,a3					*	lea CRTMOD,%a3	|, tmp35
 	jbsr (a3)					*	jsr (%a3)		| tmp35
-							*| main.c:42: 	TPALET(3, 0x5555);
+							*| main.c:52: 	TPALET(3, 0x5555);
 	pea 21845.w					*	pea 21845.w		|
 	pea 3.w						*	pea 3.w		|
 	jbsr _TPALET					*	jsr TPALET		|
-							*| main.c:48: 	printf(
+							*| main.c:58: 	printf(
 	pea _?LC0					*	pea .LC0		|
 	jbsr _puts					*	jsr puts		|
-							*| main.c:68: 	fprintf(
+							*| main.c:78: 	fprintf(
 	pea __iob+78					*	pea _iob+78		|
 	pea _?LC1					*	pea .LC1		|
 	jbsr _fputs					*	jsr fputs		|
-							*| main.c:81: 	while (INPOUT(0xFF) == 0) {}
+							*| main.c:91: 	while (INPOUT(0xFF) == 0) {}
 	lea (24,sp),sp					*	lea (24,%sp),%sp	|,
-							*| main.c:81: 	while (INPOUT(0xFF) == 0) {}
+							*| main.c:91: 	while (INPOUT(0xFF) == 0) {}
 	lea _INPOUT,a4					*	lea INPOUT,%a4	|, tmp39
 _?L2:							*.L2:
-							*| main.c:81: 	while (INPOUT(0xFF) == 0) {}
+							*| main.c:91: 	while (INPOUT(0xFF) == 0) {}
 	pea 255.w					*	pea 255.w		|
 	jbsr (a4)					*	jsr (%a4)		| tmp39
-							*| main.c:81: 	while (INPOUT(0xFF) == 0) {}
+							*| main.c:91: 	while (INPOUT(0xFF) == 0) {}
 	addq.l #4,sp					*	addq.l #4,%sp	|,
 	tst.l d0					*	tst.l %d0	| tmp43
 	jbeq _?L2					*	jeq .L2		|
-							*| main.c:84: 	CRTMOD(0x10);
+							*| main.c:94: 	CRTMOD(0x10);
 	pea 16.w					*	pea 16.w		|
 	jbsr (a3)					*	jsr (%a3)		| tmp42
-							*| main.c:87: }
+							*| main.c:97: }
 	addq.l #4,sp					*	addq.l #4,%sp	|,
 	moveq #0,d0					*	moveq #0,%d0	|
 	move.l (sp)+,a3					*	move.l (%sp)+,%a3	|,
