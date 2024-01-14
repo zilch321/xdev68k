@@ -1,0 +1,11 @@
+gdbserver-x68k version 20240114
+===============================
+
+elf2x68k (https://github.com/yunkya2/elf2x68k) で開発した X680x0 のプログラムを、
+シリアルポートで接続したクロス開発環境から GNU デバッガ (gdb) でデバッグする
+リモートデバッガです。
+
+使用方法は https://github.com/yunkya2/gdbserver-x68k を参照してください。
+
+---------------------------------------------
+Copyright 2023,2024 (c) Yuichi Nakamura (@yunkya2)
